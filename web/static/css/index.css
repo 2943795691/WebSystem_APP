@@ -1,0 +1,61 @@
+/* 设置背景图片 */
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: url("{{ url_for('static', filename='images/ruc.jpg') }}");
+    background-size: cover; /* 确保图片覆盖整个屏幕 */
+    background-position: center center; /* 图片居中显示 */
+    background-repeat: no-repeat;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 设置半透明背景 */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 首页介绍部分 */
+.intro {
+    text-align: center;
+    color: #333;
+}
+
+/* 按钮部分 */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* 大按钮样式 */
+.big-button {
+    background-color: #a81c1c; /* 人大红颜色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.big-button:hover {
+    background-color: #8b0000; /* 深色的人大红 */
+}
+
+/* 页脚部分 */
+footer {
+    background-color: #a81c1c; /* 人大红颜色 */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人大学生综合素质拓展评价管理平台</title>
+    <!-- 引入index.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
+    <!-- 背景设置：让背景图覆盖整个页面 -->
+    <div class="background-image"></div>
+
+    <!-- 主内容容器 -->
+    <div class="container">
+        <main>
+            <!-- 首页介绍部分 -->
+            <section class="intro">
+                <h1>欢迎来到人大学生综合素质拓展评价管理平台</h1>
+                <p>这里是为提升学生综合素质而设计的平台，通过志愿活动、实践活动、荣誉奖项等综合评价，帮助学生全面发展。</p>
+            </section>
+
+            <!-- 登录和注册按钮部分 -->
+            <section class="cta-buttons">
+                <div class="login-register">
+                    <button class="big-button" onclick="window.location.href='{{ url_for('login') }}'">登录</button>
+                    <button class="big-button" onclick="window.location.href='{{ url_for('register') }}'">注册</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚部分 -->
+        <footer>
+            <p>© 2024 人大学生综合素质拓展评价管理平台. 版权所有</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>
+

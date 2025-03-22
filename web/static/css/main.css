@@ -1,0 +1,73 @@
+/* 设置背景图片 */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/static/images/xiaohui.jpg'); /* 使用绝对路径 */
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    background-position: center center; /* 背景图片居中 */
+    background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+    color: #333; /* 设置文本颜色，确保可读性 */
+}
+
+/* 页面顶部样式 */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景以增强文本可读性 */
+}
+
+/* 左侧导航栏样式 */
+.leftside {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    border-right: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.leftside ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.leftside li {
+    border-bottom: 1px solid #ddd;
+}
+
+.leftside li:last-child {
+    border-bottom: none;
+}
+
+.leftside li a {
+    display: block;
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.leftside li a:hover {
+    background-color: #a81c1c;
+    color: #fff;
+}
+
+/* 主要内容区域 */
+.content {
+    margin-left: 220px; /* 为左侧导航栏预留空间 */
+    padding: 20px;
+}
+
+/* 页脚样式 */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

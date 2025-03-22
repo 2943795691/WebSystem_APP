@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员信息变更</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>管理员信息变更</h1>
+    <form action="/admin_update" method="POST">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" value="{{ admin.username }}" required>
+
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" name="email" value="{{ admin.email }}" required>
+
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" value="{{ admin.password }}" required>
+
+        <button type="submit">提交变更</button>
+    </form>
+    <br>
+    <a href="/main">返回主页面</a>
+</body>
+</html>

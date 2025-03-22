@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 人大学生综合素质拓展评价管理平台</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
+
+    <!-- 背景图片 -->
+    <div class="background-image">
+        <img src="{{ url_for('static', filename='images/ruc.jpg') }}" alt="背景图">
+    </div>
+
+    <main>
+        <section id="maxbox">
+            <h1>登录</h1>
+
+            <!-- 登录表单 -->
+            <div class="inputbox">
+                <form action="/login" method="POST">
+                    <input type="email" id="email" name="email" placeholder="请输入邮箱" required>
+                    <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    <button type="submit" class="inputButton">登录</button>
+                </form>
+            </div>
+
+            <div id="sign_up">
+                <p>还没有账号？ <a href="{{ url_for('register') }}">注册账号</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 人大学生综合素质拓展评价管理平台. 版权所有</p>
+    </footer>
+
 </body>
 </html>

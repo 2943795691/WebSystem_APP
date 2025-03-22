@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页面</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script>
+        function loadPage(page) {
+            const contentArea = document.getElementById("content");
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    contentArea.innerHTML = data;
+                });
+        }
+    </script>
+</head>
+<body>
+    <!-- 页面顶部区域 -->
+    <header class="header">
+        <h1>欢迎进入人大学生综合素质拓展评价管理平台</h1>
+    </header>
+
+    <!-- 左侧导航栏 -->
+    <nav class="leftside">
+        <ul>
+            <li><a href="javascript:void(0);" onclick="loadPage('/student_entry')">学生信息录入</a></li>
+            <li><a href="javascript:void(0);" onclick="loadPage('/student_view')">学生信息查看</a></li>
+            <li><a href="javascript:void(0);" onclick="loadPage('/admin_update')">管理员信息变更</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <section id="content" class="content">
+        <p>请选择一个操作。</p>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 人大学生综合素质拓展评价管理平台. 版权所有</p>
+    </footer>
+</body>
+</html>
